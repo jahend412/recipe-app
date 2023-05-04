@@ -1,3 +1,5 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
 <title>
@@ -5,9 +7,13 @@
 </title>
 
 <body>
-    <h1 style="display: flex; justify-content: center; margin-top: 50px;">
+    <h1 style="display: flex; justify-content: center; margin-top: 125px;">
         Recipes R Us
     </h1>
+    <br>
+    <center>
+        <img src="{% static 'recipes/images/home.jpg' %}" alt="home" width="600" height="400">
+    </center>
 </body>
 
 </html>
