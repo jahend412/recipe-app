@@ -1,0 +1,120 @@
+.body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: auto;
+    padding: 0;
+}
+
+.nav-bar {
+    width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    margin: bottom 20px;
+    border-radius: 20px;
+    background-color: #f2f2f2;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.auth_modal {
+    width: 25%;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 5px 10px 15px;
+    margin: 10px auto;
+    margin-top: 23vh;
+    font-family: sans-serif;
+}
+
+.grid_item {
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 7px;
+    width: 40vh;
+    padding: 0 0 15px 15px;
+    font-family: 'sans-serif';
+}
+
+.recipe_name {
+    color: black;
+    font-size: 25px;
+    text-decoration: none;
+}
+
+.details_body {
+    display: flex;
+}
+
+.details_short,
+.details_long {
+    padding: 8px;
+}
+
+.grid_recipe_title {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+
+}
+
+#error_login {
+    margin: 0 auto;
+    border: 3px solid rgb(243, 0, 0);
+    background-color: rgb(245, 131, 131);
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.form_input {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+.auth_modal {
+    width: 25%;
+    background-color: white;
+    border-radius: 10px;
+    padding: 25px;
+    box-shadow: 5px 10px 10px;
+    margin: 0 auto;
+    margin-top: 250px;
+    font-family: sans-serif;
+}
+
+.login_btn,
+.logout_btn,
+.back-home_btn {
+    width: 50px;
+    font-family: 'sans-serif';
+    font-size: 16px;
+    background-color: rgb(46, 2, 244);
+    border-radius: 5px;
+    border: 0px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
+}
+
+.logout_btn {
+    background-color: rgb(119, 24, 2);
+}
+
+.login_btn:hover,
+.logout_btn:hover,
+.back-home_btn:hover {
+    filter: brightness(150%);
+    transition: 500ms;
+}
