@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>RecipeApp | Details </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% load static %}
+    <link rel="shortcut icon" href="{% static 'recipes/images/favicon.png' %}">
+    <!-- CSS CUSTOM -->
+    <link rel='stylesheet' type='text/css' href="{% static 'recipes/css/styles.css' %}">
+    <style type="text/css">
+        body {
+            background: url("{% static 'recipes/images/home1.jpg' %}") no-repeat fixed;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body class="body">
+    <div class="nav-bar">
+        <a class="back-home_btn" href="/home" style="margin: 25px;"> Home </a>
+        <a class="logout_btn" href="{% url 'logout' %}" style="margin: 25px;"> Logout </a>
+    </div>
+    <h1>Search Recipes</h1>
+    <hr>
+    <form action="" method="POST" class="form_data" style="margin-bottom: 20px;">
+        {% csrf_token %}
+        {{form}}
+        <button type="submit">search</button>
+    </form>
+    <br>
+    <br>
+    {% if recipe_df %}
+    {{recipe_df|safe}}
+    <br>
+    <img alt='chart' src="data:image/png;base64, {{chart|safe}}">
+    {% else %}
+    <h3> no data</h3>
+    {% endif %}
+</body>
+
+</html>

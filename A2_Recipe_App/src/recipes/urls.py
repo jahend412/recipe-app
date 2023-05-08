@@ -12,5 +12,5 @@ urlpatterns = [
     path('recipes/list/', RecipeListView.as_view(), name='list'),
     # note need to use .as_view(), which returns callable view that takes a request and returns the response
     path('recipes/list/<pk>', RecipeDetailView.as_view(), name='detail'),
-    path('recipes/', records, name='records')
+    path('recipes/search', records, name='records')
 ]
