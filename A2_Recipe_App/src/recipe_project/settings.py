@@ -29,6 +29,8 @@ SECRET_KEY = os.environ.get(
 # ALLOWED_HOSTS = ['https://git.heroku.com/ancient-journey-46105.git']
 DEBUG = True
 
+ALLOWED_HOSTS = []
+
 # Application definition
 
 INSTALLED_APPS = [
