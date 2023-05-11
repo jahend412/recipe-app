@@ -12,13 +12,13 @@
     margin: 0 auto;
     margin: bottom 20px;
     border-radius: 20px;
-    background-color: #f2f2f2;
+    background-color: #f1d996;
     display: flex;
     justify-content: left;
     align-items: center;
 }
 
-.center {
+.nav-bar .center {
     display: block;
     margin-left: auto;
     margin-right: auto;
@@ -110,6 +110,7 @@
 
 .logout_btn {
     background-color: rgb(119, 24, 2);
+    margin: 25px;
 }
 
 .login_btn:hover,
@@ -123,4 +124,17 @@
     background-color: rgba(0, 0, 0, 0.61);
     border-radius: 10px;
     padding: 20px;
+}
+
+.back-btn {
+    width: 100px;
+    font-family: 'sans-serif';
+    font-size: 24px;
+    background-color: rgb(46, 2, 244);
+    border-radius: 5px;
+    color: white;
+    border: 0px;
+    text-decoration: none;
+    padding: 10px;
+    text-align: center;
 }

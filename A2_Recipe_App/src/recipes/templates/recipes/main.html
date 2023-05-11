@@ -18,10 +18,32 @@
 </head>
 
 <body class="body" style="margin-top: 25px;">
+
+
     <div class="nav-bar">
         <a class="back-home_btn" href="/home" style="margin: 25px;"> Home </a>
-        <a class="logout_btn" href="{%url 'recipes:records' %}"> Search </a>
-        <a class="logout_btn" href="{% url 'logout' %}" style="margin: 25px;"> Logout </a>
+        <a class="back-home_btn" href="{%url 'recipes:records' %}" style="margin: 25px"> Search </a>
+
+        <div class="search_box" style="margin-top: 10px; margin: 35%;">
+            <form action="" method="GET" class="form">
+                {% csrf_token %}
+                <input type="text" name="recipe_search" class="form_search_input" id="searchbar"
+                    placeholder="Search Recipes..." onkeyup="search_recipe()" />
+            </form>
+            <br>
+            <div class="search_results" autocomplete="off" style="display: none;">
+                {% for object in object_list %}
+                <p class="recipe_searched">
+                    <a class="recipe_name"
+                        style="font-size: 20px; font-family: sans-serif; color: black; text-decoration: none;"
+                        href="{{object.get_absolute_url}}"> {{object.name}} </a>
+                </p>
+                {% endfor %}
+            </div>
+        </div>
+
+        <a class="logout_btn" href="{% url 'logout' %}" style="margin-right: 70%;"> Logout </a>
+
     </div>
 
     <div>
@@ -52,6 +74,9 @@
                 {% endfor %}
             </table>
         </center>
+
+        <!-- linking javascript -->
+        <script src="{% static 'recipes/js/home.js' %}"></script>
 </body>
 
 </html>
